@@ -1,0 +1,54 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body{font-family: 'Merriweather Sans', sans-serif;}
+body {
+  margin: 0;
+  padding: 0;
+  background: #e7451d;
+  color:#fff;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #fff;
+  color:#000;
+}
+footer{padding-top: 20px;}
+
+/* ==========================================================================
+   Responsive images and box padding
+   ========================================================================== */
+
+
+img, object {
+    display: block; 
+    border: 0; 
+    max-width: 100%; 
+    height: auto;  
+}
+
+* {
+    -moz-box-sizing:border-box;
+    -webkit-kit-box-sizing:border-box;
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing:antialiased;
+}
+.container{
+  width:50%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+@media (max-width:980px)
+    {
+        .container{width:100%;}
+    }
