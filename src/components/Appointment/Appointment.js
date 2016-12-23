@@ -1,5 +1,6 @@
 import React from 'react'
 import $ from 'jquery'
+import _ from 'lodash'
 
 import AppointmentList from './AppointmentList'
 import './appointment.css'
@@ -23,13 +24,26 @@ const Appointment = React.createClass({
         componentWillUnmount: function() {
             this.serverRequest.abort()
         },
+        deleteMessage: function(item){
+            // var deleteItem = deleteMessage
+            var allApts = this.state.myAppointments
+            var newApts = _.without(allApts, item)
+            this.setState({
+                myAppointments: newApts
+            })
+        },
         render: function() {
-            let filteredApts = this.state.myAppointments
+            var filteredApts = this.state.myAppointments
             filteredApts = filteredApts.map(function(item, index) {
                 return(
-                    <AppointmentList key={index} singleItem={item} />
+                    <AppointmentList 
+                        key={index} 
+                        singleItem={ item }
+                        whichItem={ item }
+                        onDelete={ this.deleteMessage }
+                     />
                 )
-            })
+            }.bind(this))
 
             return (
                 <section className="appointment container">
