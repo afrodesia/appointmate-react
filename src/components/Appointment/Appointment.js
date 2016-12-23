@@ -1,5 +1,7 @@
 import React from 'react'
 import $ from 'jquery'
+
+import AppointmentList from './AppointmentList'
 import './appointment.css'
 
 
@@ -25,18 +27,9 @@ const Appointment = React.createClass({
             let filteredApts = this.state.myAppointments
             filteredApts = filteredApts.map(function(item, index) {
                 return(
-                    <li className="info media-body" key={index}>
-                        <div className="info-head">
-                            <span className="info-time pull-right">{this.state.myAppointments[index].time}</span>
-                            <h3 className="info-name">{this.state.myAppointments[index].name}</h3>
-                            <p className="info-date">{this.state.myAppointments[index].date}</p>
-                            <hr/>
-                            <p className="info-notes">{this.state.myAppointments[index].notes}</p>
-                            <p className="info-service pull-right">{this.state.myAppointments[index].service}</p>
-                        </div>
-                    </li>
+                    <AppointmentList key={index} singleItem={item} />
                 )
-            }.bind(this))
+            })
 
             return (
                 <section className="appointment container">
