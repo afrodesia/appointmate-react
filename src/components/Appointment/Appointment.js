@@ -45,21 +45,27 @@ const Appointment = React.createClass({
             }
         },
         render: function() {
-  
+            let filteredApts = this.state.data
+            filteredApts = filteredApts.map(function(item, index){
+                return(
+                    <li className="info media-body" key={index}>
+                        <div className="info-head">
+                            <span className="info-time pull-right">{this.state.data[index].time}</span>
+                            <h3 className="info-name">{this.state.data[index].name}</h3>
+                            <p className="info-date">{this.state.data[index].date}</p>
+                            <hr/>
+                            <p className="info-notes">{this.state.data[index].notes}</p>
+                            <p className="info-service pull-right">{this.state.data[index].service}</p>
+                        </div>
+                    </li>
+                )
+            }.bind(this))
             return (
                 <section className="appointment container">
+                    <h2>Appointments</h2>
                     <div className="item-list media-list">
                         <ul className="item-list media-list">
-                            <li className="info media-body">
-                                <div className="info-head">
-                                    <span className="info-time pull-right">{this.state.data[0].time}</span>
-                                    <h3 className="info-name">{this.state.data[0].name}</h3>
-                                    <p className="info-date">{this.state.data[0].date}</p>
-                                    <hr/>
-                                    <p className="info-notes">{this.state.data[0].notes}</p>
-                                    <p className="info-service pull-right">{this.state.data[0].service}</p>
-                                </div>
-                            </li>
+                            {filteredApts}
                         </ul>
 
                     </div>
