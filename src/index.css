@@ -52,5 +52,5 @@ img, object {
 @media (max-width:980px)
     {
         .container{width:100%;}
-        .appointment{padding: 30px 15px;}
+        .appointment{padding: -30px 15px 0px 0; margin-top: -40px;}
     }

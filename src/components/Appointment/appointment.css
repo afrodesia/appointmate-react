@@ -37,3 +37,15 @@
 	z-index: 10;
 	border-radius: 10px;
 }
+.panel{
+	border-radius: 10px;
+	color:#000;
+	padding: 20px;
+}
+.text-box{
+	min-width: 658px;
+}
+
+.appointment{
+	
+}

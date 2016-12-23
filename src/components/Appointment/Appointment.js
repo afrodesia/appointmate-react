@@ -3,6 +3,7 @@ import $ from 'jquery'
 import _ from 'lodash'
 
 import AppointmentList from './AppointmentList'
+import AddAppointment from './AddAppointment'
 import './appointment.css'
 
 
@@ -47,7 +48,7 @@ const Appointment = React.createClass({
 
             return (
                 <section className="appointment container">
-                    <h2>Appointments</h2>
+                    <AddAppointment />
                     <div className="item-list media-list">
                         <ul className="item-list media-list">
                             {filteredApts}
