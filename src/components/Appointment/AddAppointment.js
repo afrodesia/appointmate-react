@@ -5,10 +5,19 @@ import './appointment.css'
 
 
 const AddAppointment = React.createClass({
+
+        toggleAppDisplay : function(){
+            this.props.handleToggle()
+        },
         render: function() {
+            var displayAppBody = {
+                display: this.props.bodyVisible ? 'block' : 'none'
+            }
+
             return( 
                 <div className="panel panel-primay add-appointment">
-                    <h2><i className="fa fa-plus-circle" aria-hidden="true"></i> Add Appointment</h2>
+                    <h2 className="panel-heading" onClick={this.toggleAppDisplay} > <i className="fa fa-plus-circle" aria-hidden="true"></i> Add Appointment</h2>
+                    <div className="panel-body" style={ displayAppBody} >
                     <form className="">
                         <div className="form-group">
                             <label htmlFor="lName">First Name</label>
@@ -43,6 +52,7 @@ const AddAppointment = React.createClass({
                             <button type="button" className="btn btn-danger ">Add Appointment</button>
                         </div>
                     </form>
+                    </div>
                 </div>
 
        )

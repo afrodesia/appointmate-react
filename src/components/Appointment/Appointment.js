@@ -11,6 +11,7 @@ const Appointment = React.createClass({
 
         getInitialState: function() {
             return {
+                appBodyVisible: false,
                 myAppointments: []
             }
         },
@@ -33,6 +34,12 @@ const Appointment = React.createClass({
                 myAppointments: newApts
             })
         },
+        toggleAddDisplay : function(){
+            var tempVisibility = !this.state.appBodyVisible
+            this.setState({
+                appBodyVisible: tempVisibility
+            })
+        },
         render: function() {
             var filteredApts = this.state.myAppointments
             filteredApts = filteredApts.map(function(item, index) {
@@ -48,7 +55,10 @@ const Appointment = React.createClass({
 
             return (
                 <section className="appointment container">
-                    <AddAppointment />
+                    <AddAppointment 
+                        bodyVisible={this.state.appBodyVisible} 
+                        handleToggle={this.toggleAddDisplay}
+                        />
                     <div className="item-list media-list">
                         <ul className="item-list media-list">
                             {filteredApts}
