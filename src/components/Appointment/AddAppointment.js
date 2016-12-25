@@ -11,32 +11,32 @@ const AddAppointment = React.createClass({
                     <h2><i className="fa fa-plus-circle" aria-hidden="true"></i> Add Appointment</h2>
                     <form className="">
                         <div className="form-group">
-                            <label for="lName">First Name</label>
+                            <label htmlFor="lName">First Name</label>
                             <input id="msg" type="text" className="form-control" 
                             name="msg" placeholder="" />
                         </div>
 
                         <div className="form-group">
-                            <label for="lName">Last Name</label>
+                            <label htmlFor="lName">Last Name</label>
                             <input id="msg" type="text" className="form-control" 
                             name="msg" placeholder="" />
                         </div> 
 
                         <div className="form-group">
-                            <label for="time">Time</label>
+                            <label htmlFor="time">Time</label>
                             <input id="msg" type="text" className="form-control" 
                             name="msg" placeholder="" />
                         </div>
 
                         <div className="form-group">
-                            <label for="service">Service Needed</label>
+                            <label htmlFor="service">Service Needed</label>
                             <input id="msg" type="text" className="form-control" 
                             name="msg" placeholder="" />
                         </div>  
 
                         <div className="form-group">
-                            <label for="ANote">Add your notes</label>
-                            <textarea id="msg" type="text" className="text-box form-control" 
+                            <label htmlFor="ANote">Add your notes</label>
+                            <textarea id="msg" value="" type="text" className="text-box form-control" 
                             name="msg" placeholder=""> </textarea>
                         </div>
                         <div className="form-group"> 
