@@ -15,10 +15,11 @@ const AppointmentList = React.createClass({
                     <li className="info media-body">
 
                         <div className="media-right">
-                            <button className="list-delete btn btn-xs btn-danger 
+                            <a className="list-delete 
                             " onClick={this.handleDelete}>
-                                <span className="glyphicon glyphicon-remove"></span>
-                            </button>
+                            <i className="fa fa-times-circle" aria-hidden="true"></i>
+                             
+                            </a>
                         </div>
 
                         <div className="info-head">

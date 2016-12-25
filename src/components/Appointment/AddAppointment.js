@@ -8,7 +8,7 @@ const AddAppointment = React.createClass({
         render: function() {
             return( 
                 <section className="panel panel-primay">
-                    <h2>Add Appointment</h2>
+                    <h2><i className="fa fa-plus-circle" aria-hidden="true"></i> Add Appointment</h2>
                     <form className="add-appointment">
                         <div className="form-group">
                             <label for="lName">First Name</label>
@@ -29,6 +29,7 @@ const AddAppointment = React.createClass({
                         </div> 
 
                         <div className="form-group">
+                            <label for="ANote">Add your notes</label>
                             <textarea id="msg" type="text" className="text-box form-control" 
                             name="msg" placeholder=""> </textarea>
                         </div> 

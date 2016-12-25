@@ -30,12 +30,16 @@
 	border-radius: 10px;
 	position: relative;z-index: 0;
 }
+.list-delete:hover{color:#000;}
 .list-delete{
 	position: absolute;
-	top:5px;
-	right:5px;
+	top:-6px;
+	right:2px;
 	z-index: 10;
+	font-size: 2em;
 	border-radius: 10px;
+	color:#cf1515;
+	cursor: pointer;
 }
 .panel{
 	border-radius: 10px;
@@ -47,5 +51,5 @@
 }
 
 .appointment{
-	
+
 }
