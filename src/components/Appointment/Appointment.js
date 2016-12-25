@@ -40,6 +40,13 @@ const Appointment = React.createClass({
                 appBodyVisible: tempVisibility
             })
         },
+        addItem: function(tempItem){
+            var tempApps = this.state.myAppointments
+            tempApps.push(tempItem)
+            this.setState({
+                myAppointments: tempApps
+            })
+        },
         render: function() {
             var filteredApts = this.state.myAppointments
             filteredApts = filteredApts.map(function(item, index) {
@@ -58,6 +65,7 @@ const Appointment = React.createClass({
                     <AddAppointment 
                         bodyVisible={this.state.appBodyVisible} 
                         handleToggle={this.toggleAddDisplay}
+                        addApp={ this.addItem }
                         />
                     <div className="item-list media-list">
                         <ul className="item-list media-list">

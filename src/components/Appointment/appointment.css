@@ -53,5 +53,14 @@
 .add-appointment{
 	margin-top: -40px;
 }
-.panel-heading{background: #E7451D; color:#fff; border-radius: 0px 0px 12px 10px;}
+.panel-heading{
+	background: #E7451D; 
+	color:#fff; 
+	border-radius: 0px 0px 12px 10px; 
+	cursor:pointer;
+
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
 
