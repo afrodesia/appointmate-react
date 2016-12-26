@@ -4,6 +4,7 @@ import _ from 'lodash'
 
 import AppointmentList from './AppointmentList'
 import AddAppointment from './AddAppointment'
+
 import './appointment.css'
 
 
@@ -62,6 +63,7 @@ const Appointment = React.createClass({
 
             return (
                 <section className="appointment container">
+                    
                     <AddAppointment 
                         bodyVisible={this.state.appBodyVisible} 
                         handleToggle={this.toggleAddDisplay}
@@ -73,6 +75,8 @@ const Appointment = React.createClass({
                         </ul>
 
                     </div>
+
+
                 </section>
         );
     }

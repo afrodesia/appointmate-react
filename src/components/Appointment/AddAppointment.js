@@ -1,6 +1,7 @@
 import React from 'react'
 // import $ from 'jquery'
 // import _ from 'lodash'
+import SearchAppointments from './SearchAppointments'
 import './appointment.css'
 
 
@@ -28,6 +29,10 @@ const AddAppointment = React.createClass({
             return( 
                 <div className="panel panel-primay add-appointment">
                     <h2 className="panel-heading" onClick={this.toggleAppDisplay} > <i className="fa fa-plus-circle" aria-hidden="true"></i> Add Appointment</h2>
+                    
+                    <SearchAppointments />
+
+
                     <div className="panel-body" style={ displayAppBody} >
                     <form className="" onSubmit={ this.handleAdd }>
                         <div className="form-group">

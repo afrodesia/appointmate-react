@@ -8,7 +8,9 @@ class Header extends Component {
       <div className="header">
       	<div className="container">
 	      	<img src={logo} className="logo" alt="logo" width="30" height="30" />
-	        <h1>AppointMatess</h1>
+	        <h1>AppointMates</h1>
+
+
         </div>
       </div>
     );
